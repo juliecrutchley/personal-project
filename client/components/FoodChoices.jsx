@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from 'react-router-dom'
 
 const FoodChoices = () => {
   return (
@@ -8,7 +9,7 @@ const FoodChoices = () => {
       </div>
       <div className="food-choices-container">
         <div className="food-choice">
-          <p>Big Mac</p>
+          <Link to={"/food/1"}>Big Mac</Link>
         </div>
         <div className="food-choice">
           <p>Snickers Bar</p>

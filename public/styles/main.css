@@ -1,10 +1,10 @@
 * {
   text-align: center;
-  border: thin solid green;
+  font-family: Raleway;
 }
 
 .app {
-  background: AliceBlue;
+  background: #99ccff;
   display: flex;
   flex-direction: column;
 }
@@ -12,24 +12,28 @@
 .header {
 }
 
+.home {
+  /*background: purple;*/
+}
+
 .food-choices {
-  background: red;
+  /*background: red;*/
 }
 
 .food {
-  background: blue;
+  /*background: blue;*/
 }
 
 .food-choices-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
   height: 100px;
 }
 
 .food-choice {
-  color: blue;
+  background: #ff9999;
   align-items: flex-end;
 }
 
@@ -41,24 +45,24 @@
   height: 150px;
 }
 
-.macro-choice {
-  background: yellow;
+.macro {
+  background: #ff9999;
 }
 
 .sugar {
-  color: red;
+  /*color: red;*/
 }
 
 .salt {
-  color: pink;
+  /*color: pink;*/
 }
 
 .fat {
-  color: purple;
+  /*color: purple;*/
 }
 
 .actual {
-  background: orange;
+  /*background: orange;*/
 }
 
 .macro-actual-container {

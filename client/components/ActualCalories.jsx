@@ -5,7 +5,7 @@ const ActualCalories = () => {
     <div className="actual-calories">
       <div className="actual-calories-header">
         <p>This is how many calories are in this food</p>
-        <p>Actual calories go here</p>
+        <p>1000</p>
       </div>
     </div>
   )
