@@ -1,0 +1,48 @@
+{
+  "name": "nutrition-app",
+  "version": "1.0.0",
+  "description": "personal project for EDA phase 2",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon --watch server server/index & webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliecrutchley/personal-project.git"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "author": "Julie Crutchley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliecrutchley/personal-project/issues"
+  },
+  "homepage": "https://github.com/juliecrutchley/personal-project#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "enzyme": "^2.8.2",
+    "jsx-loader": "^0.13.2",
+    "nodemon": "^1.11.0",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.6.3",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}

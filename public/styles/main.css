@@ -1,0 +1,70 @@
+* {
+  text-align: center;
+  border: thin solid green;
+}
+
+.app {
+  background: AliceBlue;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+}
+
+.food-choices {
+  background: red;
+}
+
+.food {
+  background: blue;
+}
+
+.food-choices-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  height: 100px;
+}
+
+.food-choice {
+  color: blue;
+  align-items: flex-end;
+}
+
+.macro-choice-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+}
+
+.macro-choice {
+  background: yellow;
+}
+
+.sugar {
+  color: red;
+}
+
+.salt {
+  color: pink;
+}
+
+.fat {
+  color: purple;
+}
+
+.actual {
+  background: orange;
+}
+
+.macro-actual-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+}
