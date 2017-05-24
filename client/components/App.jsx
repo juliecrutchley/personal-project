@@ -2,7 +2,7 @@ import React from "react"
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Header from "./Header"
-import Home from "./Home"
+import Start from "./Start"
 import FoodChoices from "./FoodChoices"
 import Food from "./Food"
 import Actual from "./Actual"
@@ -12,9 +12,9 @@ const App = () => {
     <Router>
       <div className="app">
         <Route path ="/" component={Header} />
-        <Route exact path="/" component={Home} />
-        <Route path="/start" component={FoodChoices} />
-        <Route path="/food" component={Food} />
+        <Route exact path="/" component={Start} />
+        <Route path="/choose" component={FoodChoices} />
+        <Route path="/food/:id" component={Food} />
         <Route path="/food/actual" component={Actual} />
       </div>
     </Router>

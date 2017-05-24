@@ -7,13 +7,24 @@
   background: #99ccff;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
 }
 
-.home {
+p.subheading {
+  font-size: 0.8em;
+}
+
+.start {
   /*background: purple;*/
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
 }
 
 .food-choices {
@@ -27,14 +38,25 @@
 .food-choices-container {
   display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  padding: 0;
+  margin: 0;
 }
 
 .food-choice {
-  background: #ff9999;
-  align-items: flex-end;
+  display: flex;
+  background: tomato;
+  flex-direction: column;
+  padding: 5px;
+  width: 150px;
+  height: 100px;
+  margin-top: 15px;
+  line-height: 150px;
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
 }
 
 .macro-choice-container {
@@ -42,7 +64,6 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 150px;
 }
 
 .macro {
@@ -70,5 +91,4 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 150px;
 }

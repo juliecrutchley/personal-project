@@ -1,13 +1,20 @@
 import React from "react"
 import {Link} from 'react-router-dom'
+import {Router, Route} from 'react-router'
+import foodsData from '../../data/foods'
 
-const Food = () => {
-  return (
-    <div className="food">
-      <div className="food-profile-container">
-        <div className="food-image">
-          <p>Food name goes here</p>
-          <p>Food pic goes here</p>
+const Food = (props) => {
+  const id = props.match.params.id
+  console.log(id)
+  // // const profile = (foodsData[id-1])
+  // function getProfile(profile) {
+    return (
+      <div className="food">
+        <div className="food-profile-container">
+          <div className="food-image">
+            <p>Food name goes here</p>
+            <p>Food pic goes here</p>
+          </div>
         </div>
         <div>
           <p>How much do you think is in this food?</p>
@@ -30,9 +37,51 @@ const Food = () => {
           <Link to={"/food/actual"}>Submit</Link>
         </div>
       </div>
-    </div>
-  )
+    )
+  // }
+
 }
+
+
+export default Food
+
+
+
+
+
+
+{/* const Food = () => { */}
+{/* //   return (
+//     <div className="food">
+//       <div className="food-profile-container">
+//         <div className="food-image">
+//           <p>Food name goes here</p>
+//           <p>Food pic goes here</p>
+//         </div>
+//         <div>
+//           <p>How much do you think is in this food?</p>
+//         </div>
+        <div className="macro-choice-container">
+          <div className="macro sugar">
+            <p>Sugar</p>
+            <p>Guess goes here</p>
+          </div>
+          <div className="macro salt">
+            <p>Salt</p>
+            <p>Guess goes here</p>
+          </div>
+          <div className="macro fat">
+            <p>Fat</p>
+            <p>Guess goes here</p>
+          </div>
+        </div>
+        <div>
+          <Link to={"/food/actual"}>Submit</Link>
+        </div>
+// //       </div>
+// //     </div>
+// //   )
+// }
 
 export default Food
 
@@ -45,8 +94,8 @@ export default Food
 // import FoodChoices from "./FoodChoices"
 // import foodsData from "../../data/foods"
 //
-// const Food = () => {
-//   // console.log(foodsData[0])
+// const Food = () => { */}
+{/* //   // console.log(foodsData[0])
 //   return (
 //     <div>
 //        <p>Food choices goes here</p>
@@ -63,9 +112,9 @@ export default Food
   //     </div>
   //   </Router>
   // )
-// }
+// } */}
 
-//
+{/* //
 //       <div className="food-profile-container">
 //         <div className="food-image">
 //           <p>Food name goes here</p>
@@ -104,8 +153,8 @@ export default Food
 
 // import React from "react"
 //
-// const Food = () => {
-//   return (
+// const Food = () => { */}
+{/* //   return (
 //     <div className="food">
 //       <div className="food-profile-container">
 //         <div className="food-image">
@@ -132,4 +181,4 @@ export default Food
 //       </div>
 //     </div>
 //   )
-// }
+// } */}
