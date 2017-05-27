@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className='header'>
       <h1>App Name</h1>
-      <p className="subheading">An app to help you find out more about the food you're eating</p>
+      <p className='subheading'>An app to help you find out more about the food you're eating</p>
     </div>
   )
 }
