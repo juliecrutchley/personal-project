@@ -24,8 +24,7 @@ class SearchForm extends React.Component {
     event.preventDefault()
     this.setState({
       errMessage: null,
-      response: null,
-      searchQuery:this.state.value
+      response: null
     })
     getFoodFromApi(this.state.value, (err, res) => {
       if (err) {
@@ -43,18 +42,12 @@ class SearchForm extends React.Component {
   }
 
   render () {
-    console.log(this.state.searchQuery)
     return (
       <div>
         <p>Enter a food or choose one from below</p>
         <form onSubmit={this.handleSubmit}>
           <input type='text' value={this.state.value} onChange={this.handleChange} />
-          <Link to = {"/food/:" + this.state.value}><input type='submit' value='Submit' placeholder='enter a food in here...' /></Link>
-
-          <div>
-
-          </div>
-
+          <input type='submit' value='Submit' Link to={'/food:name'} />
         </form>
       </div>
     )

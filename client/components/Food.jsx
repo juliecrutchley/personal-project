@@ -5,7 +5,6 @@ import foodsData from '../../data/foodsData'
 const Food = (props) => {
   const name = props.match.params.name
   console.log(name)
-  console.log(props)
   // // const profile = (foodsData[id-1])
   // function getProfile(profile) {
     return (
