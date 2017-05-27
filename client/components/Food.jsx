@@ -1,11 +1,11 @@
 import React from "react"
 import {Link} from 'react-router-dom'
-import {Router, Route} from 'react-router'
-import foodsData from '../../data/foods'
+import foodsData from '../../data/foodsData'
 
 const Food = (props) => {
-  const id = props.match.params.id
-  console.log(id)
+  const name = props.match.params.name
+  console.log(name)
+  console.log(props)
   // // const profile = (foodsData[id-1])
   // function getProfile(profile) {
     return (
