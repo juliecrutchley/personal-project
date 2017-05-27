@@ -1,11 +1,12 @@
 import React from 'react'
 
 const Food = (props) => {
+  console.log(props)
   return (
     <div className='food'>
       <div className='food-profile-container'>
         <div className='food-image'>
-          <p>Food name goes here</p>
+          <p>{props.food.name}</p>
           <p>Food pic goes here</p>
         </div>
       </div>

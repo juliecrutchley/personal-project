@@ -13,6 +13,7 @@ class SearchForm extends React.Component {
     e.preventDefault()
     const term = this.state.searchTerm
     this.props.handleSearchFormClick(term)
+    console.log('Submiited to api: ' + term)
   }
 
   handleChange (e) {

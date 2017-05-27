@@ -43,6 +43,7 @@ class App extends React.Component {
         displaySearchForm: false,
         displayFood: true,
         food: {
+          name: 'res.ingredients.0.text',
           sugarGuess: '',
           saltGuess: '',
           fatGuess: '',

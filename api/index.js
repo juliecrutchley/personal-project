@@ -13,6 +13,7 @@ export function getFoodFromApi (apiRequest, cb) {
         return
       }
       const apiResponse = res.body
+      console.log(apiResponse)
       cb(null, apiResponse)
     })
 }
