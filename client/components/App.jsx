@@ -3,10 +3,10 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Header from './Header'
 import Start from './Start'
+import SearchForm from './SearchForm'
 import FoodChoices from './FoodChoices'
 import Food from './Food'
 import Actual from './Actual'
-import SearchForm from './SearchForm'
 
 const App = () => {
   return (

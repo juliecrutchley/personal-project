@@ -4,13 +4,17 @@ import {Link} from 'react-router-dom'
 import {getFoodFromApi} from '../../api'
 
 class SearchForm extends React.Component {
+  // componentDidMount() {
+  // }
   constructor (props) {
     super(props)
     this.state = {
-      searchQuery: ''
+      value: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+
+
   }
 
   handleChange (event) {
