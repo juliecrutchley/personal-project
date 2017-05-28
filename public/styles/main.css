@@ -1,6 +1,7 @@
 * {
   text-align: center;
   font-family: Raleway;
+  /*border: thin solid red;*/
 }
 
 .app {
@@ -9,22 +10,29 @@
   flex-direction: column;
   min-height: 100vh;
 }
-
-.header {
+.header  {
   display: flex;
   flex-direction: column;
   min-width: 100%;
+  background: #9999ff;
+}
+
+h1 {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 3em;
+  margin-bottom: 0.1em;
 }
 
 p.subheading {
   font-size: 0.8em;
+  margin-bottom: 2em;
 }
 
-.start {
-  /*background: purple;*/
-  display: flex;
-  flex-direction: column;
-  padding: 3em;
+.searchButton {
+  background: white;
+  border: black;
+  margin-left: 1em;
+  background: #9999ff;
 }
 
 .food-choices {
@@ -59,7 +67,7 @@ p.subheading {
   justify-content: center;
 }
 
-.macro-choice-container {
+.macro-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -67,7 +75,9 @@ p.subheading {
 }
 
 .macro {
-  background: #ff9999;
+  background: #f2e6ff;
+  width: 6em;
+  height: 6em;
 }
 
 .sugar {
@@ -82,13 +92,10 @@ p.subheading {
   /*color: purple;*/
 }
 
-.actual {
-  /*background: orange;*/
-}
-
-.macro-actual-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.searchAgainButton {
+  background: tomato;
+  border: black;
+  margin-top: 1em;
+  width: 15em;
+  align-self: center;
 }

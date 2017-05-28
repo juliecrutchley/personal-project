@@ -8,7 +8,7 @@ function FoodChoices () {
       {foodsData.map((food) => {
         return (
           <div className='food-choice'>
-            <Link to={'/' + 'food' + '/' + Number(food.id)}>{food.name}</Link>
+          {food.name}
           </div>
         )
       })}

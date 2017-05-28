@@ -3,8 +3,9 @@ import React from 'react'
 import Header from './Header'
 // import Start from './Start'
 import SearchForm from './SearchForm'
-// import FoodChoices from './FoodChoices'
+import FoodChoices from './FoodChoices'
 import Food from './Food'
+import SearchAgain from './SearchAgain'
 // import Actual from './Actual'
 import {getFoodFromApi} from '../../api'
 
@@ -12,14 +13,13 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      // searchTerm: '',
       // apiLoaded: false,
       displayHeader: true,
       // displayStart: true
       displaySearchForm: true,
-      // displayFoodChoices: false,
-      displayFodd: false,
-      // displayGuessForm: false,
+      displayFoodChoices: true,
+      displaySearchAgain: false,
+      displayFood: false,
       // displayActual: false,
       food: {
         sugarGuess: '',
@@ -32,7 +32,7 @@ class App extends React.Component {
       }
     }
     this.handleSearchFormClick = this.handleSearchFormClick.bind(this)
-    // this.handleGuessFormClick = this.handleGuessFormClick.bind(this)
+    this.handleSearchAgainClick = this.handleSearchAgainClick.bind(this)
   }
 
   handleSearchFormClick (searchTerm) {
@@ -41,18 +41,40 @@ class App extends React.Component {
       this.setState({
         displayHeader: true,
         displaySearchForm: false,
+        displayFoodChoices: false,
+        displaySearchAgain: true,
         displayFood: true,
         food: {
-          name: 'res.ingredients.0.text',
+          name: res.ingredients[0].parsed[0].food,
           sugarGuess: '',
           saltGuess: '',
           fatGuess: '',
-          sugarActual: 'res.totalNutrients.SUGAR.quantity',
-          saltActual: '',
-          fatActual: '',
-          calories: 'res.calories'
+          sugarActual:  Math.ceil(res.totalNutrients.SUGAR.quantity),
+          saltActual: Math.ceil(res.totalNutrients.NA.quantity),
+          fatActual: Math.ceil(res.totalNutrients.FAT.quantity),
+          calories: Math.ceil(res.calories)
         }
       })
+    })
+  }
+
+  handleSearchAgainClick () {
+    this.setState({
+      displayHeader: true,
+      displaySearchForm: true,
+      displayFoodChoices: true,
+      displaySearchAgain: false,
+      displayFood: false,
+      food: {
+        name: '',
+        sugarGuess: '',
+        saltGuess: '',
+        fatGuess: '',
+        sugarActual: '',
+        saltActual: '',
+        fatActual: '',
+        calories: ''
+      }
     })
   }
 
@@ -61,7 +83,9 @@ class App extends React.Component {
       <div className='app'>
         {this.state.displayHeader && <Header />}
         {this.state.displaySearchForm && <SearchForm handleSearchFormClick={this.handleSearchFormClick} />}
+        {this.state.displayFoodChoices && <FoodChoices handleSearchFormClick={this.handleSearchFormClick} />}
         {this.state.displayFood && <Food food={this.state.food} />}
+        {this.state.displaySearchAgain && <SearchAgain handleSearchAgainClick={this.handleSearchAgainClick}/>}
 
       </div>
     )
