@@ -2,6 +2,7 @@ import React from 'react'
 // import {HashRouter as Router} from 'react-router-dom'
 import Header from './Header'
 // import Start from './Start'
+import MainImage from './MainImage'
 import SearchForm from './SearchForm'
 import FoodChoices from './FoodChoices'
 import Food from './Food'
@@ -18,6 +19,7 @@ class App extends React.Component {
       displayHeader: true,
       // displayStart: true
       displaySearchForm: true,
+      displayMainImage: true,
       displayFoodChoices: true,
       displaySearchAgain: false,
       displayFood: false,
@@ -42,6 +44,7 @@ class App extends React.Component {
       this.setState({
         displayHeader: true,
         displaySearchForm: false,
+        displayMainImage: false,
         displayFoodChoices: false,
         displaySearchAgain: true,
         displayFood: true,
@@ -63,6 +66,7 @@ class App extends React.Component {
     this.setState({
       displayHeader: true,
       displaySearchForm: true,
+      displayMainImage: true,
       displayFoodChoices: true,
       displaySearchAgain: false,
       displayFood: false,
@@ -84,20 +88,14 @@ class App extends React.Component {
       <div className='app'>
         {this.state.displayHeader && <Header />}
         {this.state.displaySearchForm && <SearchForm handleSearchFormClick={this.handleSearchFormClick} />}
+        {this.state.displayMainImage && <MainImage />}
         {this.state.displayFoodChoices && <FoodChoices handleSearchFormClick={this.handleSearchFormClick} />}
         {this.state.displayFood && <Food food={this.state.food} />}
-        {this.state.displaySearchAgain && <SearchAgain handleSearchAgainClick={this.handleSearchAgainClick}/>}
-
+        {this.state.displaySearchAgain && <SearchAgain handleSearchAgainClick={this.handleSearchAgainClick} />}
       </div>
     )
   }
 }
-
-// {this.state.displayStart && <Start />}
-// {this.state.displaySearchForm && <SearchForm />}
-// {this.state.displayFoodChoices && <FoodChoices />}
-// {this.state.displayFood && <Food />}
-// {this.state.displayActual && <Actual />}
 
 // const App = () => {
 //   return (

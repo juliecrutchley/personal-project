@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='header'>
-      <h1>Nutri-check</h1>
-      <p className='subheading'>An app to help you find out more about the food you're eating</p>
+    <div className='header row'>
+      <h1>NUTRI-CHECK</h1>
+      <h2 className='subheading'>An app to help you find out more about the food you're eating</h2>
     </div>
   )
 }

@@ -2,14 +2,14 @@ import React from 'react'
 
 const Food = (props) => {
   console.log(props)
-  const running = Math.ceil(props.food.calories/11.4)
-  const mowing = Math.ceil(props.food.calories/7.5)
-  const hacky = Math.ceil(props.food.calories/4.1)
+  const running = Math.ceil(props.food.calories / 11.4)
+  const mowing = Math.ceil(props.food.calories / 7.5)
+  const hacky = Math.ceil(props.food.calories / 4.1)
   return (
     <div className='food'>
       <div className='food-profile-container'>
         <div className='food-name'>
-          <p>{props.food.name}</p>
+          <h3>{props.food.name}</h3>
         </div>
       </div>
       <div className='macro-container'>

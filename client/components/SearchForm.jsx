@@ -26,10 +26,10 @@ class SearchForm extends React.Component {
   render () {
     return (
       <div className='searchForm'>
-        <p>Search for a food or choose one from below</p>
+        <h3>Search for a food or choose one from below</h3>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input type='text' name='searchTerm' onChange={this.handleChange.bind(this)} />
-          <input className="searchButton" type='submit' value='Search' />
+          <input className='searchButton' type='submit' value='Search' />
         </form>
       </div>
     )
