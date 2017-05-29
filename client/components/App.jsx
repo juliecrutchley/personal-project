@@ -6,6 +6,7 @@ import SearchForm from './SearchForm'
 import FoodChoices from './FoodChoices'
 import Food from './Food'
 import SearchAgain from './SearchAgain'
+
 // import Actual from './Actual'
 import {getFoodFromApi} from '../../api'
 
@@ -49,7 +50,7 @@ class App extends React.Component {
           sugarGuess: '',
           saltGuess: '',
           fatGuess: '',
-          sugarActual:  Math.ceil(res.totalNutrients.SUGAR.quantity),
+          sugarActual: Math.ceil(res.totalNutrients.SUGAR.quantity),
           saltActual: Math.ceil(res.totalNutrients.NA.quantity),
           fatActual: Math.ceil(res.totalNutrients.FAT.quantity),
           calories: Math.ceil(res.calories)
