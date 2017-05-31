@@ -1,37 +1,29 @@
 import React from 'react'
 // import {HashRouter as Router} from 'react-router-dom'
 import Header from './Header'
-// import Start from './Start'
 import MainImage from './MainImage'
 import SearchForm from './SearchForm'
-import FoodChoices from './FoodChoices'
 import Food from './Food'
 import SearchAgain from './SearchAgain'
-
-// import Actual from './Actual'
 import {getFoodFromApi} from '../../api'
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      // apiLoaded: false,
       displayHeader: true,
-      // displayStart: true
       displaySearchForm: true,
       displayMainImage: true,
-      displayFoodChoices: true,
       displaySearchAgain: false,
       displayFood: false,
-      // displayActual: false,
+      displayHealthLabels: false,
       food: {
-        sugarGuess: '',
-        saltGuess: '',
-        fatGuess: '',
+        name: '',
         sugarActual: '',
         saltActual: '',
         fatActual: '',
-        calories: ''
+        calories: '',
+        healthLabels: []
       }
     }
     this.handleSearchFormClick = this.handleSearchFormClick.bind(this)
@@ -41,22 +33,22 @@ class App extends React.Component {
   handleSearchFormClick (searchTerm) {
     getFoodFromApi(searchTerm, (err, res) => {
       if (err) return err
+      const NA = res.totalNutrients.NA || {quantity: 0}
+      const SUGAR = res.totalNutrients.SUGAR || {quantity: 0}
+      const FAT = res.totalNutrients.FAT || {quantity: 0}
       this.setState({
-        displayHeader: true,
         displaySearchForm: false,
         displayMainImage: false,
-        displayFoodChoices: false,
         displaySearchAgain: true,
         displayFood: true,
+        displayHealthLabels: true,
         food: {
           name: res.ingredients[0].parsed[0].food,
-          sugarGuess: '',
-          saltGuess: '',
-          fatGuess: '',
-          sugarActual: Math.ceil(res.totalNutrients.SUGAR.quantity),
-          saltActual: Math.ceil(res.totalNutrients.NA.quantity),
-          fatActual: Math.ceil(res.totalNutrients.FAT.quantity),
-          calories: Math.ceil(res.calories)
+          sugarActual: Math.ceil(SUGAR.quantity),
+          saltActual: Math.ceil(NA.quantity) ,
+          fatActual: Math.ceil(FAT.quantity),
+          calories: Math.ceil(res.calories),
+          healthLabels: res.healthLabels
         }
       })
     })
@@ -64,21 +56,18 @@ class App extends React.Component {
 
   handleSearchAgainClick () {
     this.setState({
-      displayHeader: true,
       displaySearchForm: true,
       displayMainImage: true,
-      displayFoodChoices: true,
       displaySearchAgain: false,
       displayFood: false,
+      displayHealthLabels: false,
       food: {
         name: '',
-        sugarGuess: '',
-        saltGuess: '',
-        fatGuess: '',
         sugarActual: '',
         saltActual: '',
         fatActual: '',
-        calories: ''
+        calories: '',
+        healthLabels: []
       }
     })
   }
@@ -88,10 +77,11 @@ class App extends React.Component {
       <div className='app'>
         {this.state.displayHeader && <Header />}
         {this.state.displaySearchForm && <SearchForm handleSearchFormClick={this.handleSearchFormClick} />}
+        {this.state.displaySearchAgain && <SearchAgain handleSearchAgainClick={this.handleSearchAgainClick} />}
         {this.state.displayMainImage && <MainImage />}
         {this.state.displayFoodChoices && <FoodChoices handleSearchFormClick={this.handleSearchFormClick} />}
         {this.state.displayFood && <Food food={this.state.food} />}
-        {this.state.displaySearchAgain && <SearchAgain handleSearchAgainClick={this.handleSearchAgainClick} />}
+
       </div>
     )
   }

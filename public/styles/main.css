@@ -1,7 +1,6 @@
 * {
   text-align: center;
   font-family: Optima;
-  /*border: thin solid red;*/
 }
 
 .app {
@@ -14,87 +13,143 @@
   background: AliceBlue;
   display: flex;
   flex-direction: column;
-  min-width: 100%;
 }
 
 h1 {
   font-family: Didot serif;
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
   margin-top: 5rem;
 }
 
 h2 {
   font-family: Optima;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
   color: grey;
   margin-bottom: 6rem;
 }
 
 h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .searchButton {
-  border: black;
   margin-left: 1em;
   background: Grey;
   margin-bottom: 5rem;
-}
-
-.header-image {
-
-}
-
-.food-choices {
-  /*background: red;*/
 }
 
 .food {
   /*background: blue;*/
 }
 
-.food-choices-container {
-  display: flex;
-  flex-direction: row;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+.food-name {
+
 }
 
-.food-choice {
-  display: flex;
-  background: tomato;
-  flex-direction: column;
-  padding: 5px;
-  width: 150px;
-  height: 100px;
-  margin-top: 15px;
-  line-height: 150px;
-  font-size: 1em;
-  justify-content: center;
+.macro-header {
+  margin-top: 2rem;
 }
 
-.macro-container {
+.exercise-header {
+  margin-top: 2rem;
+}
+
+.macro-name-container {
+  /*background: yellow;*/
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /*width: 24em;*/
 	flex-wrap: wrap;
 	align-content: center;
+}
 
+.macro-amount-container {
+  /*background: blue;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .macro {
+  display: flex;
   background: #f2e6ff;
   width: 6em;
   height: 6em;
   margin: 1em;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: center;
+  border: thin solid grey;
+}
+
+.macro p {
+  justify-content: center;
+  display: flex;
+  vertical-align: center;
+  margin-top: 3rem;
+  border:
+}
+
+.exercise-name-container {
+  /*background: purple;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.exercise-amount-container {
+  /*background: orange;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.exercise {
+  background: #76D7C4;
+  width: 6em;
+  height: 6em;
+  margin: 1em;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: center;
+  display: flex;
+  border: thin solid grey;
+}
+
+.exercise p {
+  justify-content: center;
+  display: flex;
+  vertical-align: center;
+  margin-top: 3rem;
+}
+
+.amount p {
+  color: red;
 }
 
 .sugar {
@@ -109,25 +164,29 @@ h3 {
   /*color: purple;*/
 }
 
-.exercise-container {
+.healthLabels-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
+  margin-top: 2rem;
 }
 
-.exercise {
-  background: #76D7C4;
-  width: 6em;
-  height: 6em;
-  margin: 1em;
+.healthLabel {
+  background: #FAF99B;
+  margin: 1rem;
+  border: thin solid grey;
+  padding: 0.5rem;
 }
 
 .searchAgainButton {
-  background: tomato;
+  background: AliceBlue;
   border: black;
   margin-top: 1em;
   margin-bottom: 1em;
   width: 15em;
   align-self: center;
+  border: thin solid grey
 }
