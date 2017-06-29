@@ -63,7 +63,7 @@ const Food = (props) => {
         </div>
       </div>
       <div className='extra col-md-8 col-xs-12 more'>
-        <p>More stuff is supposed to go here</p>
+        <p>More stuff is supposed to go here...</p>
       </div>
     </div>
   )
