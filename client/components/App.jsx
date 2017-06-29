@@ -87,19 +87,4 @@ class App extends React.Component {
   }
 }
 
-// const App = () => {
-//   return (
-//     <Router>
-//       <div className='app'>
-//         <Route path='/' component={Header} />
-//         <Route exact path='/' component={Start} />
-//         <Route path='/choose' component={SearchForm} />
-//         <Route path='/choose' component={FoodChoices} />
-//         <Route path='/food/:name' component={Food} />
-//         <Route path='/food/:name/actual' component={Actual} />
-//       </div>
-//     </Router>
-//   )
-// }
-
 export default App
